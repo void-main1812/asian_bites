@@ -1,37 +1,39 @@
-import React, { FC } from "react";
-import { Text, View } from "react-native";
 import { Image } from "expo-image";
-import { BlurView } from "expo-blur";
+import { Star } from "lucide-react-native";
+import React, { FC } from "react";
+import { Text, Touchable, View } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 interface CardProps {
   name: string;
+  image: string;
   price: number;
-  image: any;
+  country: string;
+  rating: number;
 }
 
-const Card: FC<CardProps> = ({ name, price, image }) => {
-  const blurhash =
-    "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
+const Card: FC<CardProps> = ({ name, image, price, country, rating }) => {
   return (
-    <View className="h-72 w-[50%] p-2 bg-transparent relative">
-      <View className="h-full w-full rounded-lg overflow-hidden">
-        <Image
-          source={image}
-          placeholder={blurhash}
-          contentFit="cover"
-          contentPosition={"center"}
-          style={{ height: "100%", width: "100%", borderRadius: 10 }}
-        />
-        <BlurView
-          intensity={60}
-          tint="light"
-          className="h-20 w-full rounded-lg absolute bottom-0 px-3 flex flex-row justify-between items-center"
-        >
-          <Text className="text-white text-xl font-bold">{name}</Text>
-          <Text className="p-2 bg-white rounded-md text-xs">${price}</Text>
-        </BlurView>
+    <TouchableOpacity className="pb-6">
+      <View className="w-full flex flex-row space-x-8 justify-between items-center pb-6 border-b border-gray-300">
+        <View className="h-36 w-36 rounded-xl overflow-hidden">
+          <Image className="h-full w-full" source={image} />
+        </View>
+        <View className="flex w-full flex-col justify-start items-start space-y-1">
+          <Text className="text-2xl font-medium">{name}</Text>
+          <View className="flex flex-row justify-center items-center space-x-6">
+            <Text className="text-lg text-gray-600">{country}</Text>
+            <View className="flex flex-row space-x-2 justify-center items-center">
+              <Star color="#F59E0B" fill={"#ff0"} size={16} />
+              <Text className="text-lg text-yellow-600">{rating}</Text>
+            </View>
+          </View>
+          <View>
+            <Text className="text-lg font-bold text-gray-900">$ {price}</Text>
+          </View>
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
