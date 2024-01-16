@@ -1,11 +1,11 @@
-import { Menu, Search, User } from "lucide-react-native";
+import { Menu, Search, User, UserRound } from "lucide-react-native";
 import { Text, TextInput, View } from "react-native";
 import { FlatList, ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { foodCountry } from "../../data/foodCountry";
-import FoodCategory from "../components/FoodCategory";
-import Card from "../components/Card";
-import { TrendingFood } from "../../data/trending";
+import { foodCountry } from "../../../data/foodCountry";
+import FoodCategory from "../../components/FoodCategory";
+import Card from "../../components/Card";
+import { TrendingFood } from "../../../data/trending";
 
 export default function TabOneScreen() {
   return (
@@ -15,7 +15,7 @@ export default function TabOneScreen() {
           <View className="flex flex-row justify-between items-center w-full">
             <Menu color="#3A3A3A" size={26} />
             <View className="h-12 w-12 rounded-md flex justify-center items-center bg-gray-800">
-              <User color="#fff" size={24} fill={"#fff"} />
+              <UserRound color="#888888" size={24} fill={"#d4d4d4"} />
             </View>
           </View>
           <View className="w-full flex justify-start space-y-4">
