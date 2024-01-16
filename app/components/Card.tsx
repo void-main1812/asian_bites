@@ -15,8 +15,8 @@ interface CardProps {
 const Card: FC<CardProps> = ({ name, image, price, country, rating }) => {
   return (
     <TouchableOpacity className="pb-6">
-      <View className="w-full flex flex-row space-x-8 justify-between items-center pb-6 border-b border-gray-200">
-        <View className="h-36 w-36 rounded-xl overflow-hidden">
+      <View className="w-full flex flex-row space-x-10 justify-between items-center pb-6 border-b border-gray-200">
+        <View className="h-32 w-32 rounded-xl overflow-hidden">
           <Image className="h-full w-full" source={image} />
         </View>
         <View className="flex w-full flex-col justify-start items-start space-y-1">
