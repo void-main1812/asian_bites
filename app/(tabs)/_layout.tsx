@@ -1,8 +1,6 @@
 import { Tabs } from "expo-router";
 import React from "react";
 import LucideIcon from "../components/TabIcon";
-import { TabsItems } from "./tabs";
-import { Home } from "lucide-react-native";
 
 const Layout = () => {
   return (
@@ -18,7 +16,8 @@ const Layout = () => {
           elevation: 20,
           shadowColor: "#000",
           borderRadius: 25,
-          backgroundColor: "#2a2a2a",
+          backgroundColor: "#a3e635",
+          borderColor: "#a3e635",
         },
       }}
     >

@@ -20,7 +20,7 @@ export default function TabOneScreen() {
           </View>
           <View className="w-full flex justify-start space-y-4">
             <Text className="text-5xl font-semibold">
-              What'll You <Text className="text-zinc-300">Eat Today ?</Text>
+              What'll You <Text className="text-lime-400">Eat Today ?</Text>
             </Text>
             <View className="w-full py-3 px-4 flex flex-row justify-between items-center bg-zinc-100 rounded-md">
               <TextInput
@@ -37,6 +37,7 @@ export default function TabOneScreen() {
           contentContainerStyle={{
             justifyContent: "flex-start",
             alignItems: "flex-start",
+            paddingBottom: 100,
           }}
         >
           <View className="w-full flex flex-col items-start space-y-4">
