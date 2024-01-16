@@ -1,7 +1,7 @@
 import { Image } from "expo-image";
 import { Star } from "lucide-react-native";
 import React, { FC } from "react";
-import { Text, Touchable, View } from "react-native";
+import { Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 interface CardProps {
@@ -15,7 +15,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({ name, image, price, country, rating }) => {
   return (
     <TouchableOpacity className="pb-6">
-      <View className="w-full flex flex-row space-x-8 justify-between items-center pb-6 border-b border-gray-300">
+      <View className="w-full flex flex-row space-x-8 justify-between items-center pb-6 border-b border-gray-200">
         <View className="h-36 w-36 rounded-xl overflow-hidden">
           <Image className="h-full w-full" source={image} />
         </View>
