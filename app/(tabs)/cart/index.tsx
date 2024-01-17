@@ -7,7 +7,7 @@ const index = () => {
   return (
     <SafeAreaView className="bg-white">
       <View className="h-full w-full flex justify-start items-center">
-        <View className="w-full h-20 px-12 flex flex-row justify-between items-center border-b border-gray-200">
+        <View className="w-full h-20 px-8 flex flex-row justify-between items-center border-b border-gray-200">
           <View className="flex justify-center items-center">
             <Text className="text-xl font-semibold">Cart</Text>
             <Text className="text-lg font-normal text-gray-400">0 items</Text>

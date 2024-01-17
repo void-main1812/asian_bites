@@ -14,7 +14,7 @@ const LucideIcon: FC<TabIconProps> = ({ tabIcons, props }) => {
     <View className="h-8 w-8 flex justify-center items-center">
       <LucideIcon
         {...props}
-        color={props.focused ? "#4d7c0f" : "#fff"}
+        color={props.focused ? "#a3e635" : "#fff"}
         size={props.focused ? 30 : 25}
       />
     </View>
