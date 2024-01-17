@@ -9,15 +9,15 @@ const Layout = () => {
         headerShown: false,
         tabBarStyle: {
           position: "absolute",
-          bottom: 30,
-          left: 30,
-          right: 30,
+          bottom: 25,
+          left: 25,
+          right: 25,
           height: 80,
           elevation: 20,
           shadowColor: "#000",
           borderRadius: 25,
-          backgroundColor: "#a3e635",
-          borderColor: "#a3e635",
+          backgroundColor: "#1a2e05",
+          borderColor: "#1a2e05",
         },
       }}
     >
