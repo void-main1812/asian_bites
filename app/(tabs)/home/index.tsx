@@ -11,14 +11,18 @@ export default function TabOneScreen() {
   return (
     <SafeAreaView className="bg-white">
       <View className="h-full w-full bg-white">
-        <View className=" w-full flex flex-col justify-start items-center space-y-10 p-8">
-          <View className="flex flex-row justify-between items-center w-full">
-            <Menu color="#3A3A3A" size={26} />
-            <View className="h-12 w-12 rounded-md flex justify-center items-center bg-gray-800">
-              <UserRound color="#888888" size={24} fill={"#d4d4d4"} />
+        <View className=" w-full flex flex-col justify-start items-center space-y-10">
+          {/* Header */}
+          <View className="flex flex-row justify-between items-center w-full h-20 border-b border-gray-200">
+            <View className="h-full w-full flex flex-row justify-between items-center px-8">
+              <Menu color="#3A3A3A" size={26} />
+              <View className="h-12 w-12 rounded-md flex justify-center items-center bg-gray-800">
+                <UserRound color="#888888" size={24} fill={"#d4d4d4"} />
+              </View>
             </View>
           </View>
-          <View className="w-full flex justify-start space-y-4">
+          {/* Main Body */}
+          <View className="w-full flex justify-start space-y-4 p-8">
             <Text className="text-5xl font-semibold">
               What'll You <Text className="text-lime-400">Eat Today ?</Text>
             </Text>
