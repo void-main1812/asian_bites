@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { useRouter } from "expo-router";
 
 interface FoodCategoryProps {
   name: string;
@@ -10,8 +11,17 @@ interface FoodCategoryProps {
 }
 
 const FoodCategory: FC<FoodCategoryProps> = ({ name, image }) => {
+  const router = useRouter();
+
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+      onPress={() =>
+        router.push({
+          pathname: `/CountryWiseFood/${name}`,
+          params: { name: name },
+        })
+      }
+    >
       <View className="h-40 w-40 mr-6 bg-gray-100 rounded-2xl relative overflow-hidden">
         <Image
           source={image}
