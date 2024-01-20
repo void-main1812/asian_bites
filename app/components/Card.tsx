@@ -1,4 +1,5 @@
 import { Image } from "expo-image";
+import { useRouter } from "expo-router";
 import { Star } from "lucide-react-native";
 import React, { FC } from "react";
 import { Text, View } from "react-native";
@@ -13,8 +14,18 @@ interface CardProps {
 }
 
 const Card: FC<CardProps> = ({ name, image, price, country, rating }) => {
+  const router = useRouter();
+
   return (
-    <TouchableOpacity className="pb-6">
+    <TouchableOpacity
+      className="pb-6"
+      onPress={() =>
+        router.push({
+          pathname: `/FoodDetails/${name}`,
+          params: { name: name },
+        })
+      }
+    >
       <View className="w-full flex flex-row space-x-10 justify-between items-center pb-6 border-b border-gray-200">
         <View className="h-32 w-32 rounded-xl overflow-hidden">
           <Image className="h-full w-full" source={image} />
