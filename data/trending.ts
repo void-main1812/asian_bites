@@ -9,8 +9,8 @@ export const TrendingFood = [
   },
   {
     id: 2,
-    name: "Noodles",
-    country: "Japanese",
+    name: "Chow Mein",
+    country: "Chinese",
     rating: 4.8,
     price: 12.5,
     image: require("../assets/images/trending/Noodles.png"),
@@ -25,8 +25,8 @@ export const TrendingFood = [
   },
   {
     id: 4,
-    name: "Fried Chicken",
-    country: "Chinese",
+    name: "Chicken Tikka Masala",
+    country: "Indian",
     rating: 4.8,
     price: 12.5,
     image: require("../assets/images/trending/friedChicken.png"),
