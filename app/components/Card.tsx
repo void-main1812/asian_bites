@@ -11,27 +11,37 @@ interface CardProps {
   price: number;
   country: string;
   rating: number;
+  params?: any;
 }
 
-const Card: FC<CardProps> = ({ name, image, price, country, rating }) => {
+const Card: FC<CardProps> = ({
+  name,
+  image,
+  price,
+  country,
+  rating,
+  params,
+}) => {
   const router = useRouter();
 
   return (
     <TouchableOpacity
-      className="pb-6"
+      className="pb-6 rounded-xl overflow-hidden"
       onPress={() =>
         router.push({
           pathname: `/FoodDetails/${name}`,
-          params: { name: name },
+          params: { name: name, params: params },
         })
       }
     >
-      <View className="w-full flex flex-row space-x-10 justify-between items-center pb-6 border-b border-gray-200">
+      <View className="w-full rounded-xl overflow-hidden flex flex-row space-x-10 justify-between items-center relative">
         <View className="h-32 w-32 rounded-xl overflow-hidden">
           <Image className="h-full w-full" source={image} />
         </View>
         <View className="flex w-full flex-col justify-start items-start space-y-1">
-          <Text className="text-2xl font-medium">{name}</Text>
+          <Text className="text-2xl font-medium w-[180px]" numberOfLines={1}>
+            {name}
+          </Text>
           <View className="flex flex-row justify-center items-center space-x-6">
             <Text className="text-lg text-gray-600">{country}</Text>
             <View className="flex flex-row space-x-2 justify-center items-center">
@@ -43,6 +53,12 @@ const Card: FC<CardProps> = ({ name, image, price, country, rating }) => {
             <Text className="text-lg font-bold text-gray-900">$ {price}</Text>
           </View>
         </View>
+        <Image
+          source={image}
+          className="absolute h-full w-full opacity-10"
+          blurRadius={4}
+          style={{ zIndex: -1 }}
+        />
       </View>
     </TouchableOpacity>
   );

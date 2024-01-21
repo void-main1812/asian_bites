@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Image } from "expo-image";
+import { LinearGradient } from "expo-linear-gradient";
 
 const index = () => {
   return (
@@ -21,6 +22,10 @@ const index = () => {
             There are no recent updates for you.
           </Text>
         </View>
+        <LinearGradient
+          colors={["transparent", "rgba(0, 0, 0, 0.5)"]}
+          className="h-20 w-full absolute bottom-0"
+        />
       </View>
     </SafeAreaView>
   );

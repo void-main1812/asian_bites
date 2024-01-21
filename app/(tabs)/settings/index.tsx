@@ -1,3 +1,4 @@
+import { LinearGradient } from "expo-linear-gradient";
 import {
   Eye,
   KeyRound,
@@ -119,6 +120,10 @@ const index = () => {
             </View>
           </View>
         </ScrollView>
+        <LinearGradient
+          colors={["transparent", "rgba(0, 0, 0, 0.5)"]}
+          className="h-20 w-full absolute bottom-0"
+        />
       </View>
     </SafeAreaView>
   );

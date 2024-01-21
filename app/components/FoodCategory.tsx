@@ -18,7 +18,6 @@ const FoodCategory: FC<FoodCategoryProps> = ({ name, image }) => {
       onPress={() =>
         router.push({
           pathname: `/CountryWiseFood/${name}`,
-          params: { name: name },
         })
       }
     >

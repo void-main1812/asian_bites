@@ -6,6 +6,7 @@ import { foodCountry } from "../../../data/foodCountry";
 import FoodCategory from "../../components/FoodCategory";
 import Card from "../../components/Card";
 import { TrendingFood } from "../../../data/trending";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function TabOneScreen() {
   return (
@@ -26,9 +27,9 @@ export default function TabOneScreen() {
             <Text className="text-5xl font-semibold">
               What'll You <Text className="text-lime-400">Eat Today ?</Text>
             </Text>
-            <View className="w-full py-3 px-4 flex flex-row justify-between items-center bg-zinc-100 rounded-md">
+            <View className="w-full py-3 px-4 flex flex-row justify-between items-center bg-zinc-100 rounded-xl">
               <TextInput
-                className="w-[80%]"
+                className="w-[80%] h-10"
                 placeholder="Search your Favourate"
               />
               <Search color="#3A3A3A" />
@@ -77,6 +78,7 @@ export default function TabOneScreen() {
             </View>
           </View>
         </ScrollView>
+        <LinearGradient colors={["transparent", "rgba(0, 0, 0, 0.5)"]} className="h-20 w-full absolute bottom-0" />
       </View>
     </SafeAreaView>
   );
