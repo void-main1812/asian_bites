@@ -3,6 +3,8 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { Ticket } from "lucide-react-native";
 
 const index = () => {
   return (
@@ -28,6 +30,31 @@ const index = () => {
           <Text className="text-xl text-gray-400 font-semibold w-80 text-center">
             Come on Add something to your Bowl. Quick!
           </Text>
+        </View>
+        <View className="h-60 w-full p-8 absolute right-0 left-0 bottom-0 flex flex-row justify-center items-start">
+          <LinearGradient
+            colors={["#a3e635", "#65a30d"]}
+            className="w-[70%] rounded-3xl"
+          >
+            <TouchableOpacity className="w-full p-6 h-20 flex justify-center items-center  rounded-3xl">
+              <Text className="text-2xl font-semibold text-lime-50">
+                Order Now
+              </Text>
+            </TouchableOpacity>
+          </LinearGradient>
+          <LinearGradient
+            colors={["#f5f5f5", "#d4d4d4"]}
+            className="w-[25%] h-20 rounded-3xl flex justify-center items-center overflow-hidden ml-[5%]"
+          >
+            <TouchableOpacity className="w-full h-full flex justify-center items-center ">
+              <Ticket
+                size={45}
+                className="text-lime-500"
+                fill={"#bef264"}
+                strokeWidth={1}
+              />
+            </TouchableOpacity>
+          </LinearGradient>
         </View>
         <LinearGradient
           colors={["transparent", "rgba(0, 0, 0, 0.5)"]}

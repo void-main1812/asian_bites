@@ -31,7 +31,7 @@ const FoodDetails = () => {
     <View className="h-full w-full bg-white relative">
       <Image
         source={requiredData?.image}
-        className="absolute opacity-30"
+        className="absolute opacity-20"
         style={{ height: hp("104%"), width: wp("100%") }}
         blurRadius={10}
       />
@@ -47,10 +47,10 @@ const FoodDetails = () => {
             </View>
             <View className="rounded-3xl overflow-hidden">
               <View className="w-full p-6 rounded-3xl flex justify-start items-start space-y-3 bg-white/50">
-                <Text className="w-full text-3xl font-bold pb-2 border-b border-gray-300 text-lime-900">
+                <Text className="w-full text-4xl font-semibold pb-2 border-b border-gray-300 text-lime-900">
                   {requiredData?.name}
                 </Text>
-                <Text className="text-lg font-light text-neutral-500">
+                <Text className="text-xl font-normal text-neutral-400">
                   {requiredData?.description}
                 </Text>
               </View>
@@ -68,26 +68,21 @@ const FoodDetails = () => {
                   radius={80}
                   duration={1000}
                   progressValueColor={"#fbbf24"}
-                  showProgressValue={false}
                   activeStrokeColor="#fbbf24"
                   inActiveStrokeOpacity={0.2}
                   inActiveStrokeWidth={15}
                   activeStrokeWidth={15}
                   maxValue={5}
+                  title="Rating"
+                  delay={2000}
                   titleColor={"#fbbf24"}
                   titleStyle={{ fontWeight: "bold" }}
+                  progressFormatter={(value: number) => {
+                    "worklet";
+
+                    return value.toFixed(2); // 2 decimal places
+                  }}
                 />
-                <View className="absolute h-full w-full flex justify-center items-center">
-                  <Star
-                    color="#fcd34d"
-                    fill={"#fde68a"}
-                    size={45}
-                    strokeWidth={0}
-                  />
-                  <Text className="text-2xl font-bold text-amber-400">
-                    {requiredData?.rating}
-                  </Text>
-                </View>
               </View>
               <View
                 className="h-full flex justify-between items-center"
@@ -105,13 +100,18 @@ const FoodDetails = () => {
         </View>
       </ScrollView>
       <LinearGradient
-        colors={["transparent", "rgba(0,0,0,0.5)"]}
+        colors={["transparent", "rgba(255,255,255,0.8)"]}
         className="absolute  p-8 bottom-0 w-full h-10"
       >
-        <TouchableOpacity className="absolute right-8 left-8 bottom-8 h-20 bg-lime-400 flex flex-row justify-center items-center space-x-4 rounded-3xl">
-          <Utensils size={30} className="text-lime-700" />
-          <Text className="text-2xl font-black text-lime-700">Order Now</Text>
-        </TouchableOpacity>
+        <LinearGradient
+          colors={["#a3e635", "#65a30d"]}
+          className="absolute right-8 left-8 bottom-8 h-20 rounded-3xl"
+        >
+          <TouchableOpacity className="h-full w-full flex flex-row justify-center items-center space-x-4 ">
+            <Utensils size={30} className="text-lime-50" />
+            <Text className="text-2xl font-black text-lime-50">Order Now</Text>
+          </TouchableOpacity>
+        </LinearGradient>
       </LinearGradient>
     </View>
   );
