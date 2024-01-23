@@ -21,7 +21,7 @@ const FoodCategory: FC<FoodCategoryProps> = ({ name, image }) => {
         })
       }
     >
-      <View className="h-40 w-40 mr-6 bg-gray-100 rounded-2xl relative overflow-hidden">
+      <View className="h-48 w-48 mr-6 bg-gray-100 rounded-2xl relative overflow-hidden">
         <Image
           source={image}
           className="h-full w-full"
@@ -30,9 +30,9 @@ const FoodCategory: FC<FoodCategoryProps> = ({ name, image }) => {
         />
         <LinearGradient
           colors={["transparent", "rgba(0,0,0,0.5)"]}
-          className="absolute bottom-0 left-0 h-40 w-40"
+          className="absolute bottom-0 left-0 h-48 w-48"
         />
-        <Text className="absolute text-xl left-4 bottom-4 text-white font-semibold">
+        <Text className="absolute text-3xl left-4 bottom-4 text-white font-semibold tracking-widest">
           {name}
         </Text>
       </View>

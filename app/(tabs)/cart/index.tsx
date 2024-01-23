@@ -5,8 +5,11 @@ import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Ticket } from "lucide-react-native";
+import { useRouter } from "expo-router";
 
 const index = () => {
+  const router = useRouter();
+
   return (
     <SafeAreaView className="bg-white">
       <View className="h-full w-full flex justify-start items-center">
@@ -36,7 +39,10 @@ const index = () => {
             colors={["#a3e635", "#65a30d"]}
             className="w-[70%] rounded-3xl"
           >
-            <TouchableOpacity className="w-full p-6 h-20 flex justify-center items-center  rounded-3xl">
+            <TouchableOpacity
+              onPress={() => router.push("/checkout")}
+              className="w-full p-6 h-20 flex justify-center items-center  rounded-3xl"
+            >
               <Text className="text-2xl font-semibold text-lime-50">
                 Order Now
               </Text>
