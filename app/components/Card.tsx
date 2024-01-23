@@ -34,8 +34,8 @@ const Card: FC<CardProps> = ({
         })
       }
     >
-      <View className="w-full rounded-xl overflow-hidden flex flex-row space-x-10 justify-between items-center relative">
-        <View className="h-32 w-32 rounded-xl overflow-hidden">
+      <View className="w-full rounded-xl overflow-hidden flex flex-row space-x-5 justify-between items-center relative">
+        <View className="h-36 w-36 rounded-xl overflow-hidden">
           <Image className="h-full w-full" source={image} />
         </View>
         <View className="flex w-full flex-col justify-start items-start space-y-1">

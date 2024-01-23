@@ -1,7 +1,7 @@
 import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import { Stack, useLocalSearchParams } from "expo-router";
-import { Heart, ShoppingCart, Star, Utensils } from "lucide-react-native";
+import { Heart, ShoppingCart, Utensils } from "lucide-react-native";
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import CircularProgress from "react-native-circular-progress-indicator";
@@ -38,11 +38,11 @@ const FoodDetails = () => {
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView>
         <View
-          className="bg-transparent justify-start items-start relative"
-          style={{ height: hp("100%"), width: wp("100%") }}
+          className="bg-transparent justify-start items-start relative h-full mb-32"
+          style={{ width: wp("100%") }}
         >
           <View className="h-full w-full p-6 space-y-6">
-            <View className="h-auto w-full aspect-square rounded-3xl overflow-hidden bg-gray-80 mt-4">
+            <View className="h-auto w-full aspect-square rounded-3xl overflow-hidden bg-gray-80 mt-4 shadow-2xl shadow-black">
               <Image source={requiredData?.image} className="h-full w-full" />
             </View>
             <View className="rounded-3xl overflow-hidden">
@@ -61,7 +61,7 @@ const FoodDetails = () => {
             >
               <View
                 className="rounded-3xl bg-amber-50 flex justify-center items-center relative"
-                style={{ width: wp("50%"), height: hp("20%") }}
+                style={{ width: wp("50%") }}
               >
                 <CircularProgress
                   value={Number(requiredData?.rating)}
@@ -89,10 +89,18 @@ const FoodDetails = () => {
                 style={{ width: wp("35%") }}
               >
                 <TouchableOpacity className="h-[45%] rounded-2xl w-full bg-lime-950 flex justify-center items-center">
-                  <ShoppingCart size={50} className="text-lime-400" />
+                  <ShoppingCart
+                    size={50}
+                    strokeWidth={1}
+                    className="text-lime-400"
+                  />
                 </TouchableOpacity>
                 <TouchableOpacity className="h-[45%] rounded-2xl w-full bg-white/50 flex justify-center items-center">
-                  <Heart size={50} className="text-neutral-600" />
+                  <Heart
+                    size={50}
+                    strokeWidth={1}
+                    className="text-neutral-600"
+                  />
                 </TouchableOpacity>
               </View>
             </View>
@@ -109,7 +117,9 @@ const FoodDetails = () => {
         >
           <TouchableOpacity className="h-full w-full flex flex-row justify-center items-center space-x-4 ">
             <Utensils size={30} className="text-lime-50" />
-            <Text className="text-2xl font-black text-lime-50">Order Now</Text>
+            <Text className="text-2xl font-semibold text-lime-50">
+              Order Now
+            </Text>
           </TouchableOpacity>
         </LinearGradient>
       </LinearGradient>
