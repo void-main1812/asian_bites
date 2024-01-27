@@ -39,9 +39,9 @@ const Card: FC<CardProps> = ({
           <Image className="h-full w-full" source={image} />
         </View>
         <View className="flex w-full flex-col justify-start items-start space-y-1">
-          <Text className="text-2xl font-medium w-[180px]" numberOfLines={1}>
-            {name}
-          </Text>
+          <View className="flex justify-start items-start w-[40%]">
+            <Text className="text-2xl font-medium">{name}</Text>
+          </View>
           <View className="flex flex-row justify-center items-center space-x-6">
             <Text className="text-lg text-gray-600">{country}</Text>
             <View className="flex flex-row space-x-2 justify-center items-center">

@@ -47,9 +47,16 @@ const FoodDetails = () => {
             </View>
             <View className="rounded-3xl overflow-hidden">
               <View className="w-full p-6 rounded-3xl flex justify-start items-start space-y-3 bg-white/50">
-                <Text className="w-full text-4xl font-semibold pb-2 border-b border-gray-300 text-lime-900">
-                  {requiredData?.name}
-                </Text>
+                <View className="w-full flex flex-row justify-between items-center pb-2 border-b border-gray-300">
+                  <View className="w-[60%] justify-start items-start">
+                    <Text className="text-4xl font-semibold text-lime-900">
+                      {requiredData?.name}
+                    </Text>
+                  </View>
+                  <Text className="text-2xl font-semibold text-zinc-800">
+                    ${requiredData?.price}
+                  </Text>
+                </View>
                 <Text className="text-xl font-normal text-neutral-400">
                   {requiredData?.description}
                 </Text>
@@ -74,7 +81,6 @@ const FoodDetails = () => {
                   activeStrokeWidth={15}
                   maxValue={5}
                   title="Rating"
-                  delay={2000}
                   titleColor={"#fbbf24"}
                   titleStyle={{ fontWeight: "bold" }}
                   progressFormatter={(value: number) => {
