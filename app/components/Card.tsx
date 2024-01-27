@@ -23,6 +23,7 @@ const Card: FC<CardProps> = ({
   params,
 }) => {
   const router = useRouter();
+  
 
   return (
     <TouchableOpacity
