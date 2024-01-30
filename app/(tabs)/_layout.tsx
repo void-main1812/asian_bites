@@ -9,9 +9,9 @@ const Layout = () => {
         headerShown: false,
         tabBarStyle: {
           position: "absolute",
-          bottom: 25,
-          left: 25,
-          right: 25,
+          bottom: 18,
+          left: 18,
+          right: 18,
           height: 80,
           elevation: 20,
           shadowColor: "#000",
