@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Asian-Bites",
-    "slug": "Asian-Bites",
+    "slug": "asian-bites",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -41,8 +41,9 @@
         "origin": false
       },
       "eas": {
-        "projectId": "1f46fa89-711f-4067-8dfb-dda01d9061e0"
+        "projectId": "7108666d-72c0-4d76-a0bc-b2231b581214"
       }
-    }
+    },
+    "owner": "sourabhs1812"
   }
 }

@@ -32,7 +32,7 @@ const FoodCategory: FC<FoodCategoryProps> = ({ name, image }) => {
           colors={["transparent", "rgba(0,0,0,0.5)"]}
           className="absolute bottom-0 left-0 h-48 w-48"
         />
-        <Text className="absolute text-3xl left-4 bottom-4 text-white font-semibold tracking-widest">
+        <Text className="absolute text-2xl left-4 bottom-4 text-white font-semibold tracking-widest">
           {name}
         </Text>
       </View>
