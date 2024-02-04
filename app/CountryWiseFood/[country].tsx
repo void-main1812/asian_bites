@@ -7,6 +7,8 @@ import { food } from "../../data/foodData";
 import Card from "../components/Card";
 
 const CountryWiseFood = () => {
+
+  // getting search params
   const { country } = useLocalSearchParams();
   const foodData = food;
 
