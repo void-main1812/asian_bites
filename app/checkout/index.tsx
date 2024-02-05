@@ -30,13 +30,13 @@ const index = () => {
       <View className="h-full w-full bg-white justify-start items-start">
         {/* Header */}
         <View className="h-20 w-full border-b border-gray-200 justify-center items-start px-8">
-          <Text className="text-2xl font-semibold">Payment Details</Text>
+          <Text className="text-xl font-semibold">Payment Details</Text>
         </View>
         {/* Main Body */}
-        <View className="h-full w-full p-8 justify-start items-start space-y-8 relative">
+        <View className="h-full w-full p-8 justify-start items-start gap-y-12 relative">
           {/* UIP payment methods */}
           <View className="justify-start items-start space-y-4">
-            <Text className="text-4xl font-bold">
+            <Text className="text-2xl font-bold">
               Choose Your payment Method
             </Text>
             <View className="w-full flex-wrap flex-row justify-start items-center">
@@ -45,7 +45,7 @@ const index = () => {
                   key={item.name}
                   className=" px-4 py-2 rounded-md bg-neutral-100 justify-center items-center mr-3 mb-3"
                 >
-                  <Text className="text-neutral-800 text-xl">{item.name}</Text>
+                  <Text className="text-neutral-800 text-base">{item.name}</Text>
                 </View>
               ))}
             </View>
@@ -57,7 +57,7 @@ const index = () => {
           </View>
           {/* Card Payment Options */}
           <View className=" w-full justify-start items-start space-y-6">
-            <Text className="text-2xl font-semibold text-zinc-800">
+            <Text className="text-xl font-semibold text-zinc-800">
               Pay Using Card
             </Text>
             {/* Card Mockup */}
@@ -67,12 +67,12 @@ const index = () => {
             >
               <View className="w-full flex justify-between items-start">
                 <Text className="text-gray-400 text-base">Name</Text>
-                <Text className="text-white text-xl underline">
+                <Text className="text-white text-lg underline">
                   Sourabh kumar Singh
                 </Text>
               </View>
               <View className="w-full flex justify-between items-start">
-                <Text className="text-white text-3xl">XXXX XXXX XXXX 1234</Text>
+                <Text className="text-white text-2xl">XXXX XXXX XXXX 1234</Text>
               </View>
               <View className="flex flex-row w-[50%] justify-start items-center">
                 <View className="w-full flex justify-between items-start">

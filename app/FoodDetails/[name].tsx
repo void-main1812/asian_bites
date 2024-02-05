@@ -49,15 +49,15 @@ const FoodDetails = () => {
               <View className="w-full p-6 rounded-3xl flex justify-start items-start space-y-3 bg-white/50">
                 <View className="w-full flex flex-row justify-between items-center pb-2 border-b border-gray-300">
                   <View className="w-[60%] justify-start items-start">
-                    <Text className="text-4xl font-semibold text-lime-900">
+                    <Text className="text-2xl font-semibold text-lime-900">
                       {requiredData?.name}
                     </Text>
                   </View>
-                  <Text className="text-2xl font-semibold text-zinc-800">
+                  <Text className="text-lg font-semibold text-zinc-800">
                     ${requiredData?.price}
                   </Text>
                 </View>
-                <Text className="text-xl font-normal text-neutral-400">
+                <Text className="text-lg font-normal text-neutral-400">
                   {requiredData?.description}
                 </Text>
               </View>
@@ -101,7 +101,7 @@ const FoodDetails = () => {
                     className="text-lime-400"
                   />
                 </TouchableOpacity>
-                <TouchableOpacity className="h-[45%] rounded-2xl w-full bg-white/50 flex justify-center items-center">
+                <TouchableOpacity className="h-[45%] rounded-xl w-full bg-white/50 flex justify-center items-center">
                   <Heart
                     size={50}
                     strokeWidth={1}
@@ -122,8 +122,8 @@ const FoodDetails = () => {
           className="absolute right-8 left-8 bottom-8 h-20 rounded-3xl"
         >
           <TouchableOpacity className="h-full w-full flex flex-row justify-center items-center space-x-4 ">
-            <Utensils size={30} className="text-lime-50" />
-            <Text className="text-2xl font-semibold text-lime-50">
+            <Utensils size={25} className="text-lime-50" />
+            <Text className="text-xl font-semibold text-lime-50">
               Order Now
             </Text>
           </TouchableOpacity>
