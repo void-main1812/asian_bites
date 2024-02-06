@@ -70,8 +70,8 @@ const index = () => {
             </View>
           </View>
           <View className="w-full">
-            <TouchableOpacity className="w-full bg-zinc-900 p-5 rounded-lg justify-center items-center">
-              <Text className="text-white">Continue</Text>
+            <TouchableOpacity className="w-full bg-zinc-900 p-4 rounded-lg justify-center items-center">
+              <Text className="text-white text-lg">Continue</Text>
             </TouchableOpacity>
           </View>
           {/* Divider */}
@@ -96,9 +96,11 @@ const index = () => {
         </View>
         <View className="w-full justify-center items-center flex flex-row">
           <Text className="text-zinc-400">Don't have an account?</Text>
-          <Text className="ml-4 font-semibold text-zinc-800 underline">
-            Sign-up Instead
-          </Text>
+          <Link className="ml-4" href={"/auth/register/"}>
+            <Text className="font-semibold text-zinc-800 underline">
+              Register Now.
+            </Text>
+          </Link>
         </View>
       </View>
     </SafeAreaView>
