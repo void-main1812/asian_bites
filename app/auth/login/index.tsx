@@ -71,7 +71,9 @@ const index = () => {
           </View>
           <View className="w-full">
             <TouchableOpacity className="w-full bg-zinc-900 p-4 rounded-lg justify-center items-center">
-              <Text className="text-white text-lg">Continue</Text>
+              <Link className="ml-4" href={"/(tabs)/home"}>
+                <Text className="text-white text-lg">Continue</Text>
+              </Link>
             </TouchableOpacity>
           </View>
           {/* Divider */}
