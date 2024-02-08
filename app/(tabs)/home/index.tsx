@@ -16,7 +16,9 @@ export default function TabOneScreen() {
           {/* Header */}
           <View className="flex flex-row justify-between items-center w-full h-20 border-b border-gray-200">
             <View className="h-full w-full flex flex-row justify-between items-center px-8">
-              <Menu color="#3A3A3A" size={26} />
+              <Text className="text-3xl font-bold text-zinc-800">
+                Asian Bites
+              </Text>
               <View className="h-12 w-12 rounded-md flex justify-center items-center bg-gray-800">
                 <UserRound color="#888888" size={24} fill={"#d4d4d4"} />
               </View>
@@ -78,7 +80,10 @@ export default function TabOneScreen() {
             </View>
           </View>
         </ScrollView>
-        <LinearGradient colors={["transparent", "rgba(0, 0, 0, 0.5)"]} className="h-20 w-full absolute bottom-0" />
+        <LinearGradient
+          colors={["transparent", "rgba(0, 0, 0, 0.5)"]}
+          className="h-20 w-full absolute bottom-0"
+        />
       </View>
     </SafeAreaView>
   );
