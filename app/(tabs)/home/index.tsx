@@ -1,12 +1,66 @@
-import { Menu, Search, User, UserRound } from "lucide-react-native";
-import { Text, TextInput, View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { useRouter } from "expo-router";
+import { LogIn, LogOut, Search, UserRound, X } from "lucide-react-native";
+import { useState } from "react";
+import { Modal, Pressable, Text, TextInput, View } from "react-native";
 import { FlatList, ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { foodCountry } from "../../../data/foodCountry";
-import FoodCategory from "../../components/FoodCategory";
-import Card from "../../components/Card";
 import { TrendingFood } from "../../../data/trending";
-import { LinearGradient } from "expo-linear-gradient";
+import Card from "../../components/Card";
+import FoodCategory from "../../components/FoodCategory";
+
+const AuthModal = () => {
+  const [modalVisible, setModalVisible] = useState<boolean>(false);
+  const router = useRouter();
+
+  return (
+    <>
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View className="bg-white shadow-xl p-4 shadow-black/50 h-36 w-64 top-20 absolute right-8 rounded-lg">
+          <Pressable
+            className="w-full h-10 flex flex-row justify-start items-center space-x-2 "
+            onPress={() => {
+              router.push("/auth/login/"), setModalVisible(!modalVisible);
+            }}
+          >
+            <LogIn size={24} color="#3A3A3A" />
+            <Text className="text-lg font-semibold text-zinc-800">Login</Text>
+          </Pressable>
+          <View className="w-full h-0.5 bg-gray-100 mt-2" />
+          <Pressable
+            className="w-full h-12 mt-4 bg-red-100 flex flex-row justify-start items-center space-x-2 rounded-lg px-4"
+            onPress={() => {
+              router.push("/auth/login/"), setModalVisible(!modalVisible);
+            }}
+          >
+            <LogOut size={24} color="#ef4444" />
+            <Text className="text-lg font-semibold text-red-500">Logout</Text>
+          </Pressable>
+          <Pressable
+            className="h-8 w-8 absolute top-2 right-2 bg-gray-50 rounded-md border border-zinc-800 justify-center items-center"
+            onPress={() => setModalVisible(!modalVisible)}
+          >
+            <X size={15} color="#3A3A3A" />
+          </Pressable>
+        </View>
+      </Modal>
+      <Pressable
+        className="h-12 w-12 rounded-md flex justify-center items-center bg-gray-800"
+        onPress={() => setModalVisible(true)}
+      >
+        <UserRound color="#888888" size={24} fill={"#d4d4d4"} />
+      </Pressable>
+    </>
+  );
+};
 
 export default function TabOneScreen() {
   return (
@@ -19,9 +73,7 @@ export default function TabOneScreen() {
               <Text className="text-3xl font-bold text-zinc-800">
                 Asian Bites
               </Text>
-              <View className="h-12 w-12 rounded-md flex justify-center items-center bg-gray-800">
-                <UserRound color="#888888" size={24} fill={"#d4d4d4"} />
-              </View>
+              <AuthModal />
             </View>
           </View>
           {/* Main Body */}

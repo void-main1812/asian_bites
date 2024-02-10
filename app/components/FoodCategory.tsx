@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import React, { FC } from "react";
-import { Image } from "expo-image";
+import { Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useRouter } from "expo-router";

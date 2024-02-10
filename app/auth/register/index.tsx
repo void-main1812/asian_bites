@@ -1,16 +1,23 @@
 import CheckBox from "expo-checkbox";
-import { Link, Stack } from "expo-router";
+import { Link, Stack, useRouter } from "expo-router";
 import { ArrowLeft } from "lucide-react-native";
 import React, { useState } from "react";
-import { ScrollView, Text, View } from "react-native";
-import { heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { ActivityIndicator, ScrollView, Text, View } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Input from "../../components/Input";
 import SocialAuth from "../../components/SocialAuth";
-import { TouchableOpacity } from "react-native-gesture-handler";
 
 const index = () => {
   const [checked, setChecked] = useState(false);
+  const [pressed, setPressed] = useState(false);
+  const router = useRouter();
+
+  function handlePress() {
+    router.push("/(tabs)/home");
+    setPressed(true);
+  }
+
   return (
     <SafeAreaView className="bg-white">
       <Stack.Screen
@@ -75,10 +82,16 @@ const index = () => {
               </View>
             </View>
             <View className="w-full">
-              <TouchableOpacity className="w-full bg-lime-500 p-4 rounded-lg justify-center items-center">
-                <Link className="ml-4" href={"/(tabs)/home"}>
+              <TouchableOpacity
+                className="w-full bg-lime-500 p-4 rounded-lg justify-center items-center h-16"
+                activeOpacity={0.8}
+                onPress={() => handlePress()}
+              >
+                {pressed ? (
+                  <ActivityIndicator size="small" color="#fff" />
+                ) : (
                   <Text className="text-white text-lg">Continue</Text>
-                </Link>
+                )}
               </TouchableOpacity>
             </View>
             {/* Divider */}
