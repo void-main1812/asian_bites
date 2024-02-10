@@ -1,4 +1,4 @@
-import { Image } from "expo-image";
+import { Image } from "react-native";
 import { useRouter } from "expo-router";
 import { Star } from "lucide-react-native";
 import React, { FC } from "react";
@@ -23,7 +23,6 @@ const Card: FC<CardProps> = ({
   params,
 }) => {
   const router = useRouter();
-  
 
   return (
     <TouchableOpacity

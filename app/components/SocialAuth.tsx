@@ -1,10 +1,10 @@
-import { View, Text } from "react-native";
+import { View, Text, ImageSourcePropType } from "react-native";
 import React from "react";
-import { Image } from "expo-image";
+import { Image } from "react-native";
 
 interface SocialAuthProps {
   backgroundColor: string;
-  image: string;
+  image: ImageSourcePropType;
   text: string;
   classname?: string;
 }
